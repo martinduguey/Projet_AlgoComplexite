@@ -1,0 +1,230 @@
+\hypertarget{classpersonne}{}\doxysection{personne Class Reference}
+\label{classpersonne}\index{personne@{personne}}
+
+
+Cette classe permet de définir une personne.  
+
+
+
+
+{\ttfamily \#include $<$personne.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpersonne_a9cd8a9a071a175a1b8e2c2f281776b43}{personne}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpersonne_ad5f943be092468f1aa24866ae0f477dd}{personne}} (unsigned int Id)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpersonne_ae002347d15bcd938ebf8fa38dbbf7c84}\label{classpersonne_ae002347d15bcd938ebf8fa38dbbf7c84}} 
+\mbox{\hyperlink{classpersonne_ae002347d15bcd938ebf8fa38dbbf7c84}{$\sim$personne}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classpersonne_af042fb983e38bce9729fc1426efc34a7}{get\+\_\+age}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir l\textquotesingle{}age d\textquotesingle{}une personne. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpersonne_ada8303e1c67de8c3f0628114804dfb70}{get\+\_\+sexe}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir le sexe d\textquotesingle{}une personne. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classpersonne_a3c32d8e392a4f15192267c5d7bdc09bb}{get\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant d\textquotesingle{}une personne. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classpersonne_a25ea17b927da5d9915a76d498db8d312}{get\+\_\+nb\+\_\+contacts}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant d\textquotesingle{}une personne. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpersonne_af5690bb1a01611585c7d77389085e4e6}{ajout\+\_\+contact}} (unsigned int id)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un contact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classliste}{liste}}$<$ unsigned int $>$ \mbox{\hyperlink{classpersonne_a7f35afdbe7223b383fe5ab13eeb8ddbc}{get\+\_\+contacts}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la liste des contacts. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpersonne_a6dea574cbed00a38b889e3e59a2fc5fc}{get\+\_\+r1}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la relation1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpersonne_a6bcd2e761c7dae855829b69b3d2ff7cf}{get\+\_\+r2}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la relation2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpersonne_a077800246cd6227f914e0091c314579a}{get\+\_\+r3}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la relation3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpersonne_af3d013bcbfc6d863f4d01523b3cfcf14}{get\+\_\+r4}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la relation4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpersonne_aaba5ac06fa16391da430e4c3341bcf53}\label{classpersonne_aaba5ac06fa16391da430e4c3341bcf53}} 
+\mbox{\hyperlink{classpersonne}{personne}} {\bfseries operator=} (const \mbox{\hyperlink{classpersonne}{personne}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpersonne_a504cbbbc36beb22a76e4c318ac486e10}\label{classpersonne_a504cbbbc36beb22a76e4c318ac486e10}} 
+class {\bfseries population}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cette classe permet de définir une personne. 
+
+Une personne est composé d\textquotesingle{}un sexe, d\textquotesingle{}un âge et d\textquotesingle{}un identifiant. Elle est aussi reliée à 3 voisins et la relation entre une personne et son voisin est caractérisée par une relation\+: double compris entre 0 et 1, 1 les deux personnes sont des proches 0 elles ne se fréquentent pas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpersonne_a9cd8a9a071a175a1b8e2c2f281776b43}\label{classpersonne_a9cd8a9a071a175a1b8e2c2f281776b43}} 
+\index{personne@{personne}!personne@{personne}}
+\index{personne@{personne}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{personne()}{personne()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily personne\+::personne (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructeur par défaut. 
+
+Attribue aléatoirement un age, un sexe et un identifiant \mbox{\Hypertarget{classpersonne_ad5f943be092468f1aa24866ae0f477dd}\label{classpersonne_ad5f943be092468f1aa24866ae0f477dd}} 
+\index{personne@{personne}!personne@{personne}}
+\index{personne@{personne}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{personne()}{personne()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily personne\+::personne (\begin{DoxyParamCaption}\item[{unsigned int}]{Id }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & (chaîne de caractère) \\
+\hline
+\end{DoxyParams}
+Age
+
+Sexe
+
+Id
+
+Relations
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpersonne_af5690bb1a01611585c7d77389085e4e6}\label{classpersonne_af5690bb1a01611585c7d77389085e4e6}} 
+\index{personne@{personne}!ajout\_contact@{ajout\_contact}}
+\index{ajout\_contact@{ajout\_contact}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{ajout\_contact()}{ajout\_contact()}}
+{\footnotesize\ttfamily void personne\+::ajout\+\_\+contact (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}ajouter un contact. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & de la personne qu\textquotesingle{}on veut définir comme contact \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpersonne_af042fb983e38bce9729fc1426efc34a7}\label{classpersonne_af042fb983e38bce9729fc1426efc34a7}} 
+\index{personne@{personne}!get\_age@{get\_age}}
+\index{get\_age@{get\_age}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_age()}{get\_age()}}
+{\footnotesize\ttfamily int personne\+::get\+\_\+age (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir l\textquotesingle{}age d\textquotesingle{}une personne. 
+
+\begin{DoxyReturn}{Returns}
+age 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a7f35afdbe7223b383fe5ab13eeb8ddbc}\label{classpersonne_a7f35afdbe7223b383fe5ab13eeb8ddbc}} 
+\index{personne@{personne}!get\_contacts@{get\_contacts}}
+\index{get\_contacts@{get\_contacts}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_contacts()}{get\_contacts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classliste}{liste}}$<$ unsigned int $>$ personne\+::get\+\_\+contacts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la liste des contacts. 
+
+\begin{DoxyReturn}{Returns}
+contacts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a3c32d8e392a4f15192267c5d7bdc09bb}\label{classpersonne_a3c32d8e392a4f15192267c5d7bdc09bb}} 
+\index{personne@{personne}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily unsigned int personne\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant d\textquotesingle{}une personne. 
+
+\begin{DoxyReturn}{Returns}
+sexe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a25ea17b927da5d9915a76d498db8d312}\label{classpersonne_a25ea17b927da5d9915a76d498db8d312}} 
+\index{personne@{personne}!get\_nb\_contacts@{get\_nb\_contacts}}
+\index{get\_nb\_contacts@{get\_nb\_contacts}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_nb\_contacts()}{get\_nb\_contacts()}}
+{\footnotesize\ttfamily int personne\+::get\+\_\+nb\+\_\+contacts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant d\textquotesingle{}une personne. 
+
+\begin{DoxyReturn}{Returns}
+nb de contact 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a6dea574cbed00a38b889e3e59a2fc5fc}\label{classpersonne_a6dea574cbed00a38b889e3e59a2fc5fc}} 
+\index{personne@{personne}!get\_r1@{get\_r1}}
+\index{get\_r1@{get\_r1}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_r1()}{get\_r1()}}
+{\footnotesize\ttfamily double personne\+::get\+\_\+r1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la relation1. 
+
+\begin{DoxyReturn}{Returns}
+relation1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a6bcd2e761c7dae855829b69b3d2ff7cf}\label{classpersonne_a6bcd2e761c7dae855829b69b3d2ff7cf}} 
+\index{personne@{personne}!get\_r2@{get\_r2}}
+\index{get\_r2@{get\_r2}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_r2()}{get\_r2()}}
+{\footnotesize\ttfamily double personne\+::get\+\_\+r2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la relation2. 
+
+\begin{DoxyReturn}{Returns}
+relation2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_a077800246cd6227f914e0091c314579a}\label{classpersonne_a077800246cd6227f914e0091c314579a}} 
+\index{personne@{personne}!get\_r3@{get\_r3}}
+\index{get\_r3@{get\_r3}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_r3()}{get\_r3()}}
+{\footnotesize\ttfamily double personne\+::get\+\_\+r3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la relation3. 
+
+\begin{DoxyReturn}{Returns}
+relation3 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_af3d013bcbfc6d863f4d01523b3cfcf14}\label{classpersonne_af3d013bcbfc6d863f4d01523b3cfcf14}} 
+\index{personne@{personne}!get\_r4@{get\_r4}}
+\index{get\_r4@{get\_r4}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_r4()}{get\_r4()}}
+{\footnotesize\ttfamily double personne\+::get\+\_\+r4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la relation4. 
+
+\begin{DoxyReturn}{Returns}
+relation4 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpersonne_ada8303e1c67de8c3f0628114804dfb70}\label{classpersonne_ada8303e1c67de8c3f0628114804dfb70}} 
+\index{personne@{personne}!get\_sexe@{get\_sexe}}
+\index{get\_sexe@{get\_sexe}!personne@{personne}}
+\doxysubsubsection{\texorpdfstring{get\_sexe()}{get\_sexe()}}
+{\footnotesize\ttfamily std\+::string personne\+::get\+\_\+sexe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir le sexe d\textquotesingle{}une personne. 
+
+\begin{DoxyReturn}{Returns}
+sexe 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+personne.\+hpp\item 
+personne.\+cpp\end{DoxyCompactItemize}

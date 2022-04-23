@@ -1,0 +1,147 @@
+\hypertarget{classliste}{}\doxysection{liste$<$ T $>$ Class Template Reference}
+\label{classliste}\index{liste$<$ T $>$@{liste$<$ T $>$}}
+
+
+Cette classe permet de définir un noeud dans une liste chaînée.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classliste_a700950258904cba9ad850faad9e00e35}\label{classliste_a700950258904cba9ad850faad9e00e35}} 
+\mbox{\hyperlink{classliste_a700950258904cba9ad850faad9e00e35}{liste}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classliste_a87354d96419df810e73613580169182a}\label{classliste_a87354d96419df810e73613580169182a}} 
+\mbox{\hyperlink{classliste_a87354d96419df810e73613580169182a}{liste}} (const \mbox{\hyperlink{classliste}{liste}} \&)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classliste_aca447ad3aa85b3a774707ecf940559d6}\label{classliste_aca447ad3aa85b3a774707ecf940559d6}} 
+\mbox{\hyperlink{classliste_aca447ad3aa85b3a774707ecf940559d6}{$\sim$liste}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classliste_a7ef7b7197f1b588c77a6dff98d94e41b}{ajout}} (const T \&valeur)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un élément. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classliste_a55ac3e7c508d516b27739a9c7b5fca5b}{ajout\+\_\+fin}} (const T \&valeur)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un élément à la fin. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classliste_a067787ad737f1d729b0c91fa5433912c}{get\+\_\+element}} (int position) const
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder à un élément stocké à partir d\textquotesingle{}une position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classliste_a556fd93d131c94c5abe3de00e31f4031}{modif\+\_\+element}} (int position, T \&nouvelle\+\_\+donnee)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder à un élément stocké à partir d\textquotesingle{}une position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classliste_a8d780b1ba03bf1338649755d53a500c2}{get\+\_\+nb\+\_\+noeuds}} ()
+\begin{DoxyCompactList}\small\item\em Obtenir le nombre de noeuds dans la liste. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classliste_af50eb0a08603a8f4bcbb98dfe6074383}{get\+\_\+premier}} ()
+\begin{DoxyCompactList}\small\item\em Obtenir l\textquotesingle{}élément stocké dans le premier noeud de la liste. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classliste_a7f5898d1d09a98ba6417e4e347a57234}\label{classliste_a7f5898d1d09a98ba6417e4e347a57234}} 
+void {\bfseries modif\+\_\+pointeur\+\_\+ajout} (\mbox{\hyperlink{classnoeud}{noeud}}$<$ T $>$ $\ast$Precedent, \mbox{\hyperlink{classnoeud}{noeud}}$<$ T $>$ $\ast$Nouveau, \mbox{\hyperlink{classnoeud}{noeud}}$<$ T $>$ $\ast$Suivant)
+\item 
+\mbox{\Hypertarget{classliste_afa6c23b04458d0d0f6287a4cb6af8ca3}\label{classliste_afa6c23b04458d0d0f6287a4cb6af8ca3}} 
+\mbox{\hyperlink{classliste}{liste}} {\bfseries operator=} (const \mbox{\hyperlink{classliste}{liste}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class liste$<$ T $>$}
+
+Cette classe permet de définir un noeud dans une liste chaînée. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classliste_a7ef7b7197f1b588c77a6dff98d94e41b}\label{classliste_a7ef7b7197f1b588c77a6dff98d94e41b}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!ajout@{ajout}}
+\index{ajout@{ajout}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ajout()}{ajout()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::ajout (\begin{DoxyParamCaption}\item[{const T \&}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}un élément. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em valeur} & à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classliste_a55ac3e7c508d516b27739a9c7b5fca5b}\label{classliste_a55ac3e7c508d516b27739a9c7b5fca5b}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!ajout\_fin@{ajout\_fin}}
+\index{ajout\_fin@{ajout\_fin}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ajout\_fin()}{ajout\_fin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::ajout\+\_\+fin (\begin{DoxyParamCaption}\item[{const T \&}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}un élément à la fin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em valeur} & à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classliste_a067787ad737f1d729b0c91fa5433912c}\label{classliste_a067787ad737f1d729b0c91fa5433912c}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!get\_element@{get\_element}}
+\index{get\_element@{get\_element}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_element()}{get\_element()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::get\+\_\+element (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption}) const}
+
+
+
+Permet d\textquotesingle{}accéder à un élément stocké à partir d\textquotesingle{}une position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & ou se trouve la donnée recherchée \\
+\hline
+\mbox{\texttt{ in}}  & {\em donnee\+\_\+recherchee} & (emplacement pour stocker la donnée que l\textquotesingle{}on recherche) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classliste_a8d780b1ba03bf1338649755d53a500c2}\label{classliste_a8d780b1ba03bf1338649755d53a500c2}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!get\_nb\_noeuds@{get\_nb\_noeuds}}
+\index{get\_nb\_noeuds@{get\_nb\_noeuds}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_nb\_noeuds()}{get\_nb\_noeuds()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::get\+\_\+nb\+\_\+noeuds}
+
+
+
+Obtenir le nombre de noeuds dans la liste. 
+
+\begin{DoxyReturn}{Returns}
+nb\+\_\+noeuds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classliste_af50eb0a08603a8f4bcbb98dfe6074383}\label{classliste_af50eb0a08603a8f4bcbb98dfe6074383}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!get\_premier@{get\_premier}}
+\index{get\_premier@{get\_premier}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_premier()}{get\_premier()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::get\+\_\+premier}
+
+
+
+Obtenir l\textquotesingle{}élément stocké dans le premier noeud de la liste. 
+
+\begin{DoxyReturn}{Returns}
+element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classliste_a556fd93d131c94c5abe3de00e31f4031}\label{classliste_a556fd93d131c94c5abe3de00e31f4031}} 
+\index{liste$<$ T $>$@{liste$<$ T $>$}!modif\_element@{modif\_element}}
+\index{modif\_element@{modif\_element}!liste$<$ T $>$@{liste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{modif\_element()}{modif\_element()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classliste}{liste}}$<$ T $>$\+::modif\+\_\+element (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{T \&}]{nouvelle\+\_\+donnee }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder à un élément stocké à partir d\textquotesingle{}une position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & ou se trouve la donnée à remplacer \\
+\hline
+\mbox{\texttt{ in}}  & {\em nouvelle\+\_\+donnee} & (emplacement pour stocker la donnée que l\textquotesingle{}on recherche) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liste.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,181 @@
+\hypertarget{classpopulation}{}\doxysection{population Class Reference}
+\label{classpopulation}\index{population@{population}}
+
+
+Cette classe permet de définir une population de 10 000 000 d\textquotesingle{}individus.  
+
+
+
+
+{\ttfamily \#include $<$population.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpopulation_a9866a5e2211df558b8e63e30177a4ae1}\label{classpopulation_a9866a5e2211df558b8e63e30177a4ae1}} 
+\mbox{\hyperlink{classpopulation_a9866a5e2211df558b8e63e30177a4ae1}{population}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la population. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpopulation_ae89f4695eb0e5f88c37684269fefed72}\label{classpopulation_ae89f4695eb0e5f88c37684269fefed72}} 
+\mbox{\hyperlink{classpopulation_ae89f4695eb0e5f88c37684269fefed72}{population}} (unsigned int Taille)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classpopulation_aa10062f313796f7ab84ba7bbfeab1bd8}\label{classpopulation_aa10062f313796f7ab84ba7bbfeab1bd8}} 
+\mbox{\hyperlink{classpopulation_aa10062f313796f7ab84ba7bbfeab1bd8}{$\sim$population}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classpopulation_aeb9a6a19e4f293c80febbf1aaf15326c}{get\+\_\+\+Taille}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la taille de la population. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpersonne}{personne}} \mbox{\hyperlink{classpopulation_a9f0f28826a6221d731a52d725d9cfaeb}{get\+\_\+personne}} (unsigned int i)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir une personne de la population. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpopulation_abfb225f59e8d6aeb24c0d4ee58073d89}{modif\+\_\+personne}} (unsigned int i, \mbox{\hyperlink{classpersonne}{personne}} \&P)
+\begin{DoxyCompactList}\small\item\em Permet de modifier une personne. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classpopulation_a69e070caadaad13eabd6239afbf6a1f2}{get\+\_\+\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classpopulation_aa4c83d7ae93c390f5e059d6c546592c7}{get\+\_\+\+Ligne}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classpopulation_a64f50e1d2a928dde8334d97a1acfcbad}{get\+\_\+\+Valeur}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classpersonne}{personne}} $>$ \mbox{\hyperlink{classpopulation_ab5349ef8de0a77ea434b59a873c3d704}{get\+\_\+la\+\_\+population}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la population. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classpopulation_a1bd5fd52e1a0c4360cfdb6ca549b6506}{get\+\_\+etats}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir les états de la population. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classliste}{liste}}$<$ unsigned int $>$ \mbox{\hyperlink{classpopulation_a6a39d4b21977af7589e107ee6abaaa5c}{get\+\_\+infectes}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir les infectés dans la population. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cette classe permet de définir une population de 10 000 000 d\textquotesingle{}individus. 
+
+Une population est composé d\textquotesingle{}un nombre de personnes et d\textquotesingle{}une liste chaînée dont les noeuds pointent vers les états des différentes personnes de la population. On représente notre population comme une grille que l\textquotesingle{}on peut visualiser de la façon suivante pour une population de 10 000 000 d\textquotesingle{}individus \+:
+
+1000 . 2000 . 10000000 . 999 . 1999 . 9999999 . 998 . 1998 . 9999998 . 997 . 1997 . 9999997 . . . . . . . . . . . . . 3 . 1003 . 9999003 . ~\newline
+ 2 . 1002 . 9999002 . 1 . 1001 . 9999001 .
+
+On la représente comme une grille de 1000 lignes et 10 000 colonnes. Cette visualisation sous forme de grille permet de définir directement des voisins. Les points sur le bord, ont automatiquement 3 voisins. En revanche les points intérieurs ont 4 voisins potentiels. Il faudra en choisir 3 parmi les 4 (on laisse ce choix à la fonction RND). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpopulation_a1bd5fd52e1a0c4360cfdb6ca549b6506}\label{classpopulation_a1bd5fd52e1a0c4360cfdb6ca549b6506}} 
+\index{population@{population}!get\_etats@{get\_etats}}
+\index{get\_etats@{get\_etats}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_etats()}{get\_etats()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ population\+::get\+\_\+etats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir les états de la population. 
+
+\begin{DoxyReturn}{Returns}
+etats 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_a69e070caadaad13eabd6239afbf6a1f2}\label{classpopulation_a69e070caadaad13eabd6239afbf6a1f2}} 
+\index{population@{population}!get\_Index@{get\_Index}}
+\index{get\_Index@{get\_Index}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_Index()}{get\_Index()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ population\+::get\+\_\+\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. 
+
+\begin{DoxyReturn}{Returns}
+Index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_a6a39d4b21977af7589e107ee6abaaa5c}\label{classpopulation_a6a39d4b21977af7589e107ee6abaaa5c}} 
+\index{population@{population}!get\_infectes@{get\_infectes}}
+\index{get\_infectes@{get\_infectes}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_infectes()}{get\_infectes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classliste}{liste}}$<$ unsigned int $>$ population\+::get\+\_\+infectes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir les infectés dans la population. 
+
+\begin{DoxyReturn}{Returns}
+infectes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_ab5349ef8de0a77ea434b59a873c3d704}\label{classpopulation_ab5349ef8de0a77ea434b59a873c3d704}} 
+\index{population@{population}!get\_la\_population@{get\_la\_population}}
+\index{get\_la\_population@{get\_la\_population}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_la\_population()}{get\_la\_population()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classpersonne}{personne}} $>$ population\+::get\+\_\+la\+\_\+population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la population. 
+
+\begin{DoxyReturn}{Returns}
+la\+\_\+population 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_aa4c83d7ae93c390f5e059d6c546592c7}\label{classpopulation_aa4c83d7ae93c390f5e059d6c546592c7}} 
+\index{population@{population}!get\_Ligne@{get\_Ligne}}
+\index{get\_Ligne@{get\_Ligne}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_Ligne()}{get\_Ligne()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ population\+::get\+\_\+\+Ligne (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. 
+
+\begin{DoxyReturn}{Returns}
+Ligne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_a9f0f28826a6221d731a52d725d9cfaeb}\label{classpopulation_a9f0f28826a6221d731a52d725d9cfaeb}} 
+\index{population@{population}!get\_personne@{get\_personne}}
+\index{get\_personne@{get\_personne}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_personne()}{get\_personne()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpersonne}{personne}} population\+::get\+\_\+personne (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir une personne de la population. 
+
+\begin{DoxyReturn}{Returns}
+personne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_aeb9a6a19e4f293c80febbf1aaf15326c}\label{classpopulation_aeb9a6a19e4f293c80febbf1aaf15326c}} 
+\index{population@{population}!get\_Taille@{get\_Taille}}
+\index{get\_Taille@{get\_Taille}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_Taille()}{get\_Taille()}}
+{\footnotesize\ttfamily unsigned int population\+::get\+\_\+\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la taille de la population. 
+
+\begin{DoxyReturn}{Returns}
+N 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_a64f50e1d2a928dde8334d97a1acfcbad}\label{classpopulation_a64f50e1d2a928dde8334d97a1acfcbad}} 
+\index{population@{population}!get\_Valeur@{get\_Valeur}}
+\index{get\_Valeur@{get\_Valeur}!population@{population}}
+\doxysubsubsection{\texorpdfstring{get\_Valeur()}{get\_Valeur()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ population\+::get\+\_\+\+Valeur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la matrice d\textquotesingle{}adjacence stockée sous forme forward star. 
+
+\begin{DoxyReturn}{Returns}
+Valeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpopulation_abfb225f59e8d6aeb24c0d4ee58073d89}\label{classpopulation_abfb225f59e8d6aeb24c0d4ee58073d89}} 
+\index{population@{population}!modif\_personne@{modif\_personne}}
+\index{modif\_personne@{modif\_personne}!population@{population}}
+\doxysubsubsection{\texorpdfstring{modif\_personne()}{modif\_personne()}}
+{\footnotesize\ttfamily void population\+::modif\+\_\+personne (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{\mbox{\hyperlink{classpersonne}{personne}} \&}]{P }\end{DoxyParamCaption})}
+
+
+
+Permet de modifier une personne. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & indice de la personne que l\textquotesingle{}on veut modifier dans la liste \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & personne par laquelle on veut la remplacer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+population.\+hpp\item 
+population.\+cpp\end{DoxyCompactItemize}
